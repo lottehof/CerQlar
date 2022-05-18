@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('~assets/fonts/NeueHaasGrotesk-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 550;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('~assets/fonts/NeueHaasGrotesk-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 650;
+}
+
+@font-face {
+    font-family: 'Neue Haas Grotesk';
+    src: url('~assets/fonts/NeueHaasGrotesk-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 750;
+}
+
+@font-face {
+    font-family: 'TT Interfaces';
+    src: url("~assets/fonts/TTInterfaces-Light.otf") format('opentype');
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'TT Interfaces';
+    src: url("~assets/fonts/TTInterfaces-Regular.otf") format('opentype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'TT Interfaces';
+    src: url("~assets/fonts/TTInterfaces-Bold.otf") format('opentype');
+    font-style: normal;
+    font-weight: 700;
+}

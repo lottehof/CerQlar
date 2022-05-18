@@ -1,0 +1,169 @@
+<template lang="html">
+  <section>
+    <div class="" v-for="(items, name) in body" :key="name">
+      <div class="style__styledContainer" v-if="items.sys.contentType.sys.id === 'callToActionSection'" >
+        <div class="style__CircleBorder"></div>
+            <div class="style__Container" >
+              <div class="style__Row">
+                <div class="style__StyledColumn">
+                  <img class="image" :src="items.fields.image.fields.file.url" alt="">
+                  <h2 class="style__H2">{{ items.fields.title }}</h2>
+                  <p class="style__P">{{ items.fields.description }}</p>
+                  <div class="styleButtonContainer">
+                    <a :href="items.fields.callToAction.fields.url" class="style__A">
+                      <span class="style__span">{{items.fields.callToAction.fields.label}}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+</template>
+
+<script>
+
+import RichTextRenderer from 'contentful-rich-text-vue-renderer';
+import CallToAction from '@/components/callToActionSection'
+
+export default {
+  components:{
+    CallToAction,
+  },
+  props: {
+    body: {
+      type: Array,
+      require: true,
+    },
+    callToAction: {
+      type: Array,
+      require: true,
+    },
+    cTas:{
+      type: Array,
+      require: true,
+    }
+  },
+  methods: {
+  debug (items) {
+    console.log(items)
+  }
+}
+
+
+
+}
+</script>
+
+<style lang="css" scoped>
+.style__styledContainer{
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+  margin-bottom: 6rem;
+  margin-right: 56px;
+  margin-left: 56px;
+  text-align: left;
+  border-radius: 0.6rem;
+  background-color: rgb(63, 142, 252);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+.style__CircleBorder{
+  width: 500px;
+  height: 500px;
+  background-color: rgb(63, 142, 252);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.style__Container{
+  padding-left: 56px;
+  padding-right: 56px;
+  width: 100%;
+  margin: 0px auto;
+  max-width: 1500px;
+  text-align: left;
+}
+.style__Row{
+  margin: calc(-16px);
+  display: flex;
+  flex-wrap: wrap;
+}
+.style__StyledColumn{
+  padding: calc(16px);
+  width: calc(41.6667%);
+}
+.image{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: calc((100% - 1500px) / 2 + 875px);
+  margin-left: 0px;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 5.6rem;
+}
+.style__H2{
+  position: relative;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1.6rem;
+  z-index: 1;
+  font-size: 4.6rem;
+  line-height: 1.2;
+  font-family: "TT Interfaces", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+.style__P{
+  margin-bottom: 2rem;
+  position: relative;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+}
+.styleButtonContainer{
+  flex-direction: row;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0px auto;
+}
+.style__A{
+  padding: 0.6rem 3.2rem;
+  min-height: 5.6rem;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  z-index: 1;
+  background-color: rgb(42, 39, 46);
+  border-radius: 0.6rem;
+  border: 2px solid rgb(42, 39, 46);
+  font-family: "TT Interfaces";
+  font-weight: 400;
+  line-height: 2.56rem;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: auto;
+  transition: all 0.3s cubic-bezier(0.45, 0, 0.55, 1) 0s;
+  text-decoration: none;
+}
+.style__span{
+  position: relative;
+width: 100%;
+font-weight: 700;
+}
+</style>
