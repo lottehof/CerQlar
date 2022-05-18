@@ -1,6 +1,6 @@
-<template lang="html">
+<!-- <template lang="html">
   <section>
-    <!-- <Menu /> -->
+
     <main>
       <Landing
       v-for="landing in landings"
@@ -68,4 +68,4 @@ export default {
 </script>
 
 <style lang="css" scoped>
-</style>
+</style> -->

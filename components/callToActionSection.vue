@@ -9,7 +9,7 @@
                   <img class="image" :src="items.fields.image.fields.file.url" alt="">
                   <h2 class="style__H2">{{ items.fields.title }}</h2>
                   <p class="style__P">{{ items.fields.description }}</p>
-                  <div class="styleButtonContainer">
+                  <div class="styleButtonContainer" v-if="items.fields.callToAction">
                     <a :href="items.fields.callToAction.fields.url" class="style__A">
                       <span class="style__span">{{items.fields.callToAction.fields.label}}</span>
                     </a>
