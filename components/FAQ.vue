@@ -1,9 +1,9 @@
 <template lang="html">
   <section>
     <div class="" v-for="(items, name) in body" :key="name">
-      <div class="style__styledContainer" v-if="items.sys.contentType.sys.id === 'faqSection'">
+      <div class="style__StyledContainer" v-if="items.sys.contentType.sys.id === 'faqSection'">
         <div class="style__Container">
-          <div class="style__row">
+          <div class="style__Row">
             <div class="style__StyledColumnone">
               <div class="style__StyledHeader">
                 <h2 class="style__H2">{{items.fields.title}}</h2>
@@ -11,24 +11,23 @@
             </div>
           </div>
         </div>
-        <FAQItem :items="items" />
-        <!-- <div class="style__Container" v-for="(faqitem) in items">
-          <div class="style__row">
+        <div class="style__Container" v-for="(faqitem) in items.fields.items">
+          <div class="style__Row row-item">
             <div class="style__StyledColumn">
               <div class="styled__container">
-                <button @click="boxone = !boxone" class="style__Button" type="button" name="button">
-                  <h4 class="style__H4">{{item.fields.name}}</h4>
+                <button @click="faqitem.fields.title = !faqitem.fields.title" class="style__Button" type="button" name="button">
+                  <h4 class="style__H4">{{faqitem.fields.name}}</h4>
                   <span class="style__Span" :class="{ boxone: boxone}">
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M18.652 12.414L21 10.069v3.172l-2.348 2.345-2.917 2.828V15.24l2.917-2.827zM10.826 17.655V2h2.348v18.897L12.036 22 3 13.241V10.07l7.826 7.586z"></path></g><defs><clipPath id="clip0"><path fill="#fff" transform="matrix(0 1 1 0 3 2)" d="M0 0h20v18H0z"></path></clipPath></defs></svg>
                   </span>
                 </button>
-                <div class="style__RichTextContainer" v-if="boxone">
-                  <p class="style__P" v-html="$options.filters.markdown()">iet</p>
+                <div class="style__RichTextContainer" v-if="!faqitem.fields.title">
+                  <p class="style__P" v-html="$options.filters.markdown(faqitem.fields.description)"></p>
                 </div>
               </div>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
   </section>
@@ -43,12 +42,6 @@ export default {
   data(){
   return{
   boxone: false,
-  boxtwo: false,
-  boxthree: false,
-  boxfour: false,
-  boxfive: false,
-  boxsix: false,
-  boxseven: false,
   }
 },
   props: {
@@ -66,13 +59,13 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.style__styledContainer{
+.style__StyledContainer{
   background: transparent;
   position: relative;
   margin: 6rem 0px;
   padding: 4rem 0px;
 }
-.style__styledContainer::before{
+.style__StyledContainer::before{
   right: calc((100% - 1500px) / 2.2 + 80px);
   left: calc((100% - 1500px) / 2.2 + 80px);
   content: "";
@@ -90,10 +83,14 @@ export default {
   margin: 0px auto;
   max-width: 1500px;
 }
-.style__row{
+.style__Row{
   margin: calc(-20px);
   display: flex;
   flex-wrap: wrap;
+
+}
+.row-item{
+  margin-bottom: 1.6rem;
 }
 .style__StyledColumnone{
   padding: calc(20px);

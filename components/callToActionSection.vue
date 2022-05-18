@@ -62,8 +62,6 @@ export default {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
   margin-bottom: 6rem;
-  margin-right: 56px;
-  margin-left: 56px;
   text-align: left;
   border-radius: 0.6rem;
   background-color: rgb(63, 142, 252);
@@ -73,6 +71,8 @@ export default {
   -webkit-box-align: center;
   align-items: center;
   overflow: hidden;
+  margin-right: calc((100% - 1500px) / 2.2 + 80px);
+  margin-left: calc((100% - 1500px) / 2.2 + 80px);
 }
 .style__CircleBorder{
   width: 500px;
@@ -93,6 +93,7 @@ export default {
   max-width: 1500px;
   text-align: left;
 }
+
 .style__Row{
   margin: calc(-16px);
   display: flex;
