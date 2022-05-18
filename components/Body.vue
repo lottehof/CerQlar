@@ -5,7 +5,8 @@
         <contentSection :body="body"/>
         <EmployeesSection :body="body" />
         <Career :body="body"/>
-        <FAQ :body="body" />
+        <VideoSection :body="body"/>
+        <FAQ :body="body"/>
         <callToActionSection :body="body" />
     </div>
   </div>
@@ -17,6 +18,7 @@ import CallToAction from '@/components/callToActionSection'
 import contentSection from '@/components/contentSectionSecond'
 import EmployeesSection from '@/components/EmployeesSection'
 import Career from '@/components/Career'
+import VideoSection from '@/components/VideoSection'
 import FAQ from '@/components/FAQ'
 
 export default {
@@ -25,6 +27,7 @@ export default {
     contentSection,
     EmployeesSection,
     Career,
+    VideoSection,
     FAQ,
   },
   props: {
