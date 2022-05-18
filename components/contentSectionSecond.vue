@@ -8,7 +8,7 @@
             <img class="style__image" :src="items.fields.image.fields.file.url" :alt="items.fields.heading" v-if="items.fields.image">
           </div>
           <div class="style__StyledColumn" :class="items.fields.isCentered ? 'flex' : 'is-false'">
-            <h2 class="style__H2">{{ items.fields.name }}</h2>
+            <h2 class="style__H2">{{ items.fields.title }}</h2>
             <div class="style__RichTextContainer" >
             <div class="product__description" ></div>
               <p class="style__P" v-html="$options.filters.markdown(items.fields.content)"></p>
