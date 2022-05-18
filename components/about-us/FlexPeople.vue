@@ -1,4 +1,4 @@
-<!-- <template lang="html">
+<template lang="html">
   <div class="style__styledContainer">
     <div class="style__Container">
       <div class="style__Row" v-for="(employee, name) in items" :key="">
@@ -150,4 +150,4 @@ export default {
   font-style: normal;
   line-height: 1.63;
 }
-</style> -->
+</style>

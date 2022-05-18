@@ -3,6 +3,7 @@
     <div class="Styled__container" >
       <div>
         <contentSection :body="body"/>
+        <EmployeesSection :body="body" />
         <FAQ :body="body" />
         <callToActionSection :body="body" />
     </div>
@@ -11,16 +12,16 @@
 </template>
 
 <script>
-
-import RichTextRenderer from 'contentful-rich-text-vue-renderer';
 import CallToAction from '@/components/callToActionSection'
 import contentSection from '@/components/contentSectionSecond'
+import EmployeesSection from '@/components/EmployeesSection'
 import FAQ from '@/components/FAQ'
 
 export default {
   components:{
     CallToAction,
     contentSection,
+    EmployeesSection,
     FAQ,
   },
   props: {

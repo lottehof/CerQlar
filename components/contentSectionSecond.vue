@@ -12,7 +12,7 @@
             <div class="style__RichTextContainer" >
             <div class="product__description" ></div>
               <p class="style__P" v-html="$options.filters.markdown(items.fields.content)"></p>
-            <a :href="items.fields.callToAction.fields.url" class="style__A">
+            <a :href="items.fields.callToAction.fields.url" class="style__A" v-if="items.fields.callToAction">
                 <span class="style__label">{{items.fields.callToAction.fields.label}}</span>
               <span class="style__span">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.414 18.652L10.069 21h3.172l2.345-2.348 2.828-2.917H15.24l-2.827 2.917zM17.655 10.826H2v2.348h18.897L22 12.036 13.241 3H10.07l7.586 7.826z"></path>

@@ -10,28 +10,19 @@
     :key="name"
     :body="page.body"
     />
-
-
   </div>
 </template>
 
 <script>
 import pageHeading from '~/components/pageHeadingSection'
-import contentSectionSecond from '~/components/contentSectionSecond'
 import Body from '~/components/Body'
-import callToActionSection from '~/components/callToActionSection'
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import {createClient} from '../../plugins/contentful';
 const contentfulClient = createClient();
 
 export default {
   components:{
-    contentSectionSecond,
-    callToActionSection,
     pageHeading,
     Body
-
-
   },
   name: 'index',
   id: '1',

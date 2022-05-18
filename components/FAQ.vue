@@ -34,10 +34,9 @@
 </template>
 
 <script>
-import FAQItem from '@/components/FAQItem'
 export default {
   components:{
-    FAQItem
+
   },
   data(){
   return{
