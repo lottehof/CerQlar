@@ -6,8 +6,8 @@
           <div class="style__StyledColumn" v-for="(employee) in items.fields.items">
             <img class="style__ImageContainer"
             :src="employee.fields.image.fields.file.url" :alt="employee.fields.heading" v-if="employee.fields.image">
-            <h3 class="style__H3">Timo Pentner {{employee.fields.employeeName}}</h3>
-            <p class="style__P">Managing Director {{employee.fields.role}}</p>
+            <h3 class="style__H3">{{employee.fields.employeeName}}</h3>
+            <p class="style__P">{{employee.fields.role}}</p>
           </div>
         </div>
       </div>

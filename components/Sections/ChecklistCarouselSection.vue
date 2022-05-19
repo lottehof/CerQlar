@@ -155,31 +155,18 @@
             </ssr-carousel>
           </div>
         </div>
-        <!-- <div class="content">
-
-
-        <vueper-slides :arrows="false" :bullets="false">
-          <vueper-slide v-for="(slide, i) in slides" :key="i" :title="slide.title" :content="slide.content" />
-        </vueper-slides>
-    </div> -->
-
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import { VueperSlides, VueperSlide } from 'vueperslides'
-import 'vueperslides/dist/vueperslides.css'
 export default {
   props: {
     body: {
       type: Array,
       require: true,
     },
-  },
-  components: {
-    VueperSlides, VueperSlide
   },
   data() {
     return {
@@ -196,14 +183,6 @@ export default {
     };
   },
   methods: {
-    changeIndex(index) {
-      this.sliderValue = index;
-    },
-
-    goto(index){
-      this.currentSlide = index;
-      console.log(index);
-},
     mouseOver: function(){
         this.hover = true;
         this.hovertwo = false;

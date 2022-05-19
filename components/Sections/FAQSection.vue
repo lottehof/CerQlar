@@ -152,9 +152,6 @@ export default {
 .boxone svg{
     transform: rotate(180deg);
 }
-/* .boxtwo svg{
-    transform: rotate(180deg);
-} */
 .style__RichTextContainer{
   padding: 0px 4rem 3.2rem;
 }
@@ -178,8 +175,6 @@ export default {
   font-weight: normal;
   font-style: normal;
   font-size: 1.6rem;
-  /* transform: rotate(180deg); */
-
 }
 .style__span svg{
   display: inline-block;

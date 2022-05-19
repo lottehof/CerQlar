@@ -33,7 +33,6 @@ export default {
 
 <style lang="css" scoped>
 .style__StyledContainer{
-  background: transparent;
   position: relative;
   margin: 6rem 0px;
   padding: 4rem 0px;
@@ -52,7 +51,6 @@ export default {
 .style__Container{
   padding-left: 80px;
   padding-right: 80px;
-  width: 100%;
   margin: 0px auto;
   max-width: 1500px;
 }
@@ -95,7 +93,7 @@ export default {
 }
 .style__StyledVideo{
   position: absolute;
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 </style>

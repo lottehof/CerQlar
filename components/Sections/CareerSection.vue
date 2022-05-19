@@ -2,7 +2,7 @@
   <section class="career">
     <div class="style__styledContainer" v-for="(items, name) in body" :key="name">
       <div class="style__Container" v-if="items.sys.contentType.sys.id === 'career'">
-        <div class="style__Row second">
+        <div class="style__Row">
           <div class="style__StyledColumn">
             <div class="style__ContainerStyled">
               <h3 class="style__H3">{{items.fields.name}}</h3>
@@ -48,16 +48,10 @@ export default {
 }
 .style__Row{
   -webkit-box-align: center;
-  align-items: center;
-  flex-direction: row-reverse;
   -webkit-box-pack: center;
   justify-content: center;
   margin: calc(-20px);
   display: flex;
-  flex-wrap: wrap;
-}
-.second{
-    flex-direction: row;
 }
 .style__StyledColumn{
   padding: calc(20px);
