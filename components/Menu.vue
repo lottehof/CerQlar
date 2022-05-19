@@ -19,7 +19,7 @@
                 <ul class="style-dropdown" v-show="upHere">
                   <li class="listitem" @mouseover="span = true" @mouseleave="span = false">
                     <a href="/solution" class="dropdown-a">
-                      <div class="">
+                      <div class="listitemContainer">
                         <p class="dropdown-p">Overview</p>
                         <p class="dropdown-p-2"></p>
                       </div>
@@ -31,7 +31,7 @@
 
                   <li class="listitem" @mouseover="spantwo = true" @mouseleave="spantwo = false">
                       <a href="/trades" class="dropdown-a">
-                        <div class="">
+                        <div class="listitemContainer">
                           <p class="dropdown-p">Trades</p>
                           <p class="dropdown-p-2"></p>
                         </div>
@@ -42,7 +42,7 @@
                     </li>
                     <li class="listitem" @mouseover="spanthree = true" @mouseleave="spanthree = false">
                       <a href="/contracts" class="dropdown-a">
-                        <div class="">
+                        <div class="listitemContainer">
                           <p class="dropdown-p">Contracts</p>
                           <p class="dropdown-p-2"></p>
                         </div>
@@ -53,7 +53,7 @@
                     </li>
                     <li class="listitem" @mouseover="spanfour = true" @mouseleave="spanfour = false">
                       <a href="/inventory" class="dropdown-a">
-                        <div class="">
+                        <div class="listitemContainer">
                           <p class="dropdown-p">Inventory</p>
                           <p class="dropdown-p-2"></p>
                         </div>
@@ -85,7 +85,7 @@
                     </li>
                     <li class="listitem" @mouseover="spansix = true" @mouseleave="spansix = false" >
                       <a href="/careers" class="dropdown-a">
-                        <div class="">
+                        <div class="listitemContainer">
                           <p class="dropdown-p">Careers</p>
                           <p class="dropdown-p-2"></p>
                         </div>
@@ -231,6 +231,9 @@ export default {
 .styled-nav .span-solutions:focus{
   transform: rotate(180deg);
 }
+.listitemContainer{
+  margin-right: 2rem;
+}
 .span-solutions svg,
 .span-login svg,
 .span-dropdown svg{
@@ -289,6 +292,8 @@ export default {
   box-shadow: rgb(62 78 134 / 10%) 0px 15px 80px;
   z-index: 2;
   padding: 1rem;
+  width: 140px;
+  max-width: 140px;
 
 }
 .listitem{
@@ -324,6 +329,9 @@ export default {
   font-weight: normal;
   font-style: normal;
   line-height: 1.63;
+}
+ul{
+  list-style-image: none;
 }
 
 </style>

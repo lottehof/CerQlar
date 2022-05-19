@@ -35,25 +35,17 @@
 
 <script>
 export default {
-  components:{
-
-  },
   data(){
-  return{
-  boxone: false,
-  }
-},
+    return{
+    boxone: false,
+    }
+  },
   props: {
     body: {
       type: Array,
       require: true,
     },
   },
-  methods: {
-  debug (items) {
-    console.log(items)
-  }
-}
 }
 </script>
 

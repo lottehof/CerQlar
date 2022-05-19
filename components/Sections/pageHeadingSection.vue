@@ -1,5 +1,6 @@
 <template lang="html">
-  <div class="IntroblockContainer" >
+  <section>
+  <div class="IntroblockContainer" v-for="(item, name) in pageheading" :key="name">
     <div class="IntroBlock" >
       <span class="span-1">
         <span class="span-2">
@@ -7,47 +8,33 @@
         </span>
       </span>
     </div>
-    <div class="style-container">
+    <div class="style-container"  >
       <div class="style-row">
-        <div class="style-column">
+        <div class="style-column" >
           <div class="introBlockBody" >
-            <h1 class="style-h1">{{title}} </h1>
-            <p class="style-p">{{subtitle}}</p>
+            <h1 class="style-h1">{{item.fields.title}} </h1>
+            <p class="style-p">{{item.fields.subtitle}}</p>
           </div>
         </div>
         <div class="style-column">
           <div class="">
-            <img class="styled-image" :src="landingImage" alt="">
+            <img class="styled-image" :src="item.fields.image.fields.file.url" :alt="item.fields.heading" v-if="item.fields.image">
           </div>
         </div>
       </div>
     </div>
   </div>
+    </section>
 </template>
 
 <script>
 export default {
   props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    subtitle: {
-      type: String,
-      required: false,
-    },
-    landingImage: {
-      type: String,
-      required: true,
-    },
-    id: {
-      type: String,
-      required: true,
-    },
-
-
-},
-
+    pageheading: {
+      type: Array,
+      require: true,
+    }
+  },
 }
 </script>
 

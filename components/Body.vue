@@ -2,33 +2,39 @@
   <section>
     <div class="Styled__container" >
       <div>
+        <uspsSection :body="body"/>
         <contentSection :body="body"/>
         <EmployeesSection :body="body" />
-        <Career :body="body"/>
+        <CareerSection :body="body"/>
         <VideoSection :body="body"/>
-        <FAQ :body="body"/>
-        <callToActionSection :body="body" />
+        <FAQSection :body="body"/>
+        <CallToActionSection :body="body" />
+        <ChecklistCarouselSection :body="body"/>
     </div>
   </div>
   </section>
 </template>
 
 <script>
-import CallToAction from '@/components/callToActionSection'
-import contentSection from '@/components/contentSectionSecond'
-import EmployeesSection from '@/components/EmployeesSection'
-import Career from '@/components/Career'
-import VideoSection from '@/components/VideoSection'
-import FAQ from '@/components/FAQ'
+import uspsSection from '@/components/Sections/uspsSection'
+import contentSection from '@/components/Sections/contentSection'
+import EmployeesSection from '@/components/Sections/EmployeesSection'
+import CareerSection from '@/components/Sections/CareerSection'
+import VideoSection from '@/components/Sections/VideoSection'
+import FAQSection from '@/components/Sections/FAQSection'
+import CallToActionSection from '@/components/Sections/callToActionSection'
+import ChecklistCarouselSection from '@/components/Sections/ChecklistCarouselSection'
 
 export default {
   components:{
-    CallToAction,
+    uspsSection,
     contentSection,
     EmployeesSection,
-    Career,
+    CareerSection,
     VideoSection,
-    FAQ,
+    FAQSection,
+    CallToActionSection,
+    ChecklistCarouselSection
   },
   props: {
     body: {

@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import pageHeading from '~/components/pageHeadingSection'
+import pageHeading from '~/components/Sections/pageHeadingSection'
 import Body from '~/components/Body'
 import {createClient} from '../../plugins/contentful';
 const contentfulClient = createClient();
@@ -38,16 +38,6 @@ export default {
       }
     }).catch(console.error)
   },
-  props:{
-    body:{
-      type: Array,
-      require: true,
-    },
-    callToAction:{
-      type: Array,
-      require: true,
-      }
-    }
   }
 </script>
 

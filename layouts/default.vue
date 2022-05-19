@@ -1,18 +1,18 @@
 <template>
   <div>
-    <Navigation></Navigation>
+    <Menu />
     <Nuxt />
     <Footer />
   </div>
 </template>
 
 <script>
-  import Navigation from '../components/Navigation';
-  import Footer from '@/components/Footer'
+  import Menu from '@/components/Menu'
+  import Footer from '@/components/Footer/Footer'
 
   export default {
     components: {
-      Navigation,
+      Menu,
       Footer
     },
   }
@@ -57,9 +57,7 @@ ul{
   margin-top: 2.4rem;
 }
 li{
-  /* padding-left: 3.6rem; */
   position: relative;
-  /* color: rgb(255, 255, 255); */
   margin-bottom: 1.6rem;
   font-family: "Neue Haas Grotesk", Verdana, sans-serif;
   font-weight: normal;
@@ -69,10 +67,10 @@ li{
 }
 p{
   font-family: "Neue Haas Grotesk", Verdana, sans-serif;
-font-weight: normal;
-font-style: normal;
-font-size: 1.6rem;
-line-height: 1.63;
-color: rgb(40, 38, 41);
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.63;
+  color: rgb(40, 38, 41);
 }
 </style>

@@ -1,59 +1,47 @@
 <template lang="html">
-  <div class="styled_container">
-    <div class="style_container">
-      <div class="style_row">
-        <div class="styled_column">
-          <div class="styledHeader">
-            <h2 class="style_h2">{{ title }}</h2>
-            <p class="style_p">{{ description}}</p>
+  <section>
+    <div class="" v-for="(items, name) in body" :key="name">
+      <div class="styled_container" v-if="items.sys.contentType.sys.id === 'uspsSection'">
+        <div class="style_container">
+          <div class="style_row">
+            <div class="styled_column">
+              <div class="styledHeader">
+                <h2 class="style_h2">{{ items.fields.title }}</h2>
+                <p class="style_p">{{ items.fields.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="style_container_text">
+          <div class="style_row_second">
+            <div class="style_Column" v-for="item in items.fields.items">
+              <div class="style_style_container">
+                <span class="style_span">
+                    <img :src="require(`~/assets/img/${item.fields.icon}.png`)"alt="">
+                </span>
+                <h5 class="style_h5">
+                  {{item.fields.name}}
+                </h5>
+                <p class="style_p">
+                  {{ item.fields.description}}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="style_container_text">
-      <div class="style_row_second">
-
-        <div class="style_Column" v-for="item in items">
-          <div class="style_style_container">
-            <span class="style_span">
-                <img :src="require(`~/assets/img/${item.icon}.png`)"alt="">
-            </span>
-            <h5 class="style_h5">
-              {{item.name}}
-            </h5>
-            <p class="style_p">
-              {{ item.description}}
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
+  </section>
 </template>
 
 <script>
 export default {
   props: {
-    name: {
-      type: String,
-      required: true,
-    },
-    title: {
-      type: String,
-      required: true,
-    },
-    description: {
-      type: String,
-      required: true,
-    },
-    items: {
+    body:{
       type: Array,
-      required: true,
+      require: true
     }
-  },
-
+  }
 }
 </script>
 

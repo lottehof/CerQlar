@@ -28,36 +28,13 @@
 </template>
 
 <script>
-
-import RichTextRenderer from 'contentful-rich-text-vue-renderer';
-import CallToAction from '@/components/callToActionSection'
-
 export default {
-  components:{
-    CallToAction,
-  },
   props: {
     body: {
       type: Array,
       require: true,
     },
-    callToAction: {
-      type: Array,
-      require: true,
-    },
-    cTas:{
-      type: Array,
-      require: true,
-    }
-  },
-  methods: {
-  debug (items) {
-    console.log(items)
   }
-}
-
-
-
 }
 </script>
 
