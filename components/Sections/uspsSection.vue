@@ -1,5 +1,6 @@
 <template lang="html">
   <section>
+    <client-only>
     <div class="" v-for="(items, name) in body" :key="name">
       <div class="styled_container" v-if="items.sys.contentType.sys.id === 'uspsSection'">
         <div class="style_container">
@@ -31,6 +32,7 @@
         </div>
       </div>
     </div>
+    </client-only>
   </section>
 </template>
 

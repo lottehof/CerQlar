@@ -1,5 +1,6 @@
 <template lang="html">
   <section>
+    <client-only>
     <div class="" v-for="(items, name) in body" :key="name">
       <div class="style__StyledContainer" v-if="items.sys.contentType.sys.id === 'faqSection'">
         <div class="style__Container">
@@ -11,6 +12,7 @@
             </div>
           </div>
         </div>
+
         <div class="style__Container" v-for="(faqitem) in items.fields.items">
           <div class="style__Row row-item">
             <div class="style__StyledColumn">
@@ -21,7 +23,7 @@
                     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><path d="M18.652 12.414L21 10.069v3.172l-2.348 2.345-2.917 2.828V15.24l2.917-2.827zM10.826 17.655V2h2.348v18.897L12.036 22 3 13.241V10.07l7.826 7.586z"></path></g><defs><clipPath id="clip0"><path fill="#fff" transform="matrix(0 1 1 0 3 2)" d="M0 0h20v18H0z"></path></clipPath></defs></svg>
                   </span>
                 </button>
-                <div class="style__RichTextContainer" v-if="!faqitem.fields.title">
+                <div class="style__RichTextContainer" v-show="!faqitem.fields.title">
                   <p class="style__P" v-html="$options.filters.markdown(faqitem.fields.description)"></p>
                 </div>
               </div>
@@ -30,6 +32,7 @@
         </div>
       </div>
     </div>
+  </client-only>
   </section>
 </template>
 

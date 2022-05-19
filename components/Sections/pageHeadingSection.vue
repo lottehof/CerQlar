@@ -1,30 +1,32 @@
 <template lang="html">
   <section>
-  <div class="IntroblockContainer" v-for="(item, name) in pageheading" :key="name">
-    <div class="IntroBlock" >
-      <span class="span-1">
-        <span class="span-2">
-          <img class="intro-image" src="@/assets/img/orb-secondary.webp" alt="">
-        </span>
-      </span>
-    </div>
-    <div class="style-container"  >
-      <div class="style-row">
-        <div class="style-column" >
-          <div class="introBlockBody" >
-            <h1 class="style-h1">{{item.fields.title}} </h1>
-            <p class="style-p">{{item.fields.subtitle}}</p>
-          </div>
+    <client-only>
+      <div class="IntroblockContainer" v-for="(item, name) in pageheading" :key="name">
+        <div class="IntroBlock" >
+          <span class="span-1">
+            <span class="span-2">
+              <img class="intro-image" src="@/assets/img/orb-secondary.webp" alt="">
+            </span>
+          </span>
         </div>
-        <div class="style-column">
-          <div class="">
-            <img class="styled-image" :src="item.fields.image.fields.file.url" :alt="item.fields.heading" v-if="item.fields.image">
+        <div class="style-container"  >
+          <div class="style-row">
+            <div class="style-column" >
+              <div class="introBlockBody" >
+                <h1 class="style-h1">{{item.fields.title}} </h1>
+                <p class="style-p">{{item.fields.subtitle}}</p>
+              </div>
+            </div>
+            <div class="style-column">
+              <div class="">
+                <img class="styled-image" :src="item.fields.image.fields.file.url" :alt="item.fields.heading" v-if="item.fields.image">
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-    </section>
+    </client-only>
+  </section>
 </template>
 
 <script>

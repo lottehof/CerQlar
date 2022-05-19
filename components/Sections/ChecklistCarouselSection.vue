@@ -1,5 +1,6 @@
 <template lang="html">
   <section>
+    <client-only>
     <div class="" v-for="(items, name) in body" :key="name">
       <div class="style_styledContainer" v-if="items.sys.contentType.sys.id === 'checklistCarouselSection'">
 
@@ -157,6 +158,7 @@
         </div>
       </div>
     </div>
+  </client-only>
   </section>
 </template>
 

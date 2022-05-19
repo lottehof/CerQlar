@@ -1,5 +1,6 @@
 <template lang="html">
   <section>
+    <client-only>
     <div class="" v-for="(items, name) in body" :key="name">
       <div class="style__StyledContainer" v-if="items.sys.contentType.sys.id === 'videoSection'">
         <div class="style__Container">
@@ -17,6 +18,7 @@
         </div>
       </div>
     </div>
+    </client-only>
   </section>
 </template>
 

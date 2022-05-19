@@ -1,5 +1,6 @@
 <template lang="html">
   <section>
+    <client-only>
     <div class="style__styledContainer" v-for="(items, name) in body" :key="name">
       <div class="style__Container" v-if="items.sys.contentType.sys.id === 'employeesSection'">
         <div class="style__Row" >
@@ -12,8 +13,8 @@
         </div>
       </div>
     </div>
+  </client-only>
   </section>
-
 </template>
 
 <script>

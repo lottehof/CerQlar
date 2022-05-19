@@ -1,25 +1,27 @@
 <template lang="html">
   <section>
-    <div class="" v-for="(items, name) in body" :key="name">
-      <div class="style__styledContainer" v-if="items.sys.contentType.sys.id === 'callToActionSection'" >
-        <div class="style__CircleBorder"></div>
-            <div class="style__Container" >
-              <div class="style__Row">
-                <div class="style__StyledColumn">
-                  <img class="image" :src="items.fields.image.fields.file.url" alt="">
-                  <h2 class="style__H2">{{ items.fields.title }}</h2>
-                  <p class="style__P">{{ items.fields.description }}</p>
-                  <div class="styleButtonContainer" v-if="items.fields.callToAction">
-                    <a :href="items.fields.callToAction.fields.url" class="style__A">
-                      <span class="style__span">{{items.fields.callToAction.fields.label}}</span>
-                    </a>
+    <client-only>
+      <div class="" v-for="(items, name) in body" :key="name">
+        <div class="style__styledContainer" v-if="items.sys.contentType.sys.id === 'callToActionSection'" >
+          <div class="style__CircleBorder"></div>
+              <div class="style__Container" >
+                <div class="style__Row">
+                  <div class="style__StyledColumn">
+                    <img class="image" :src="items.fields.image.fields.file.url" alt="">
+                    <h2 class="style__H2">{{ items.fields.title }}</h2>
+                    <p class="style__P">{{ items.fields.description }}</p>
+                    <div class="styleButtonContainer" v-if="items.fields.callToAction">
+                      <a :href="items.fields.callToAction.fields.url" class="style__A">
+                        <span class="style__span">{{items.fields.callToAction.fields.label}}</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+    </client-only>
   </section>
 </template>
 
